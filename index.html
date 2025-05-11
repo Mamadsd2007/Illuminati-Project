@@ -3,28 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Illuminati Portfolio</title>
+  <title>پرتفوی ایلومیناتی</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <div class="logo">👁️ Illuminati</div>
-    <nav>
-      <a href="#">خانه</a>
-      <a href="#">درباره من</a>
-      <a href="#">پروژه‌ها</a>
-      <a href="#">تماس</a>
-    </nav>
-    <a class="login-btn" href="#">ورود</a>
+    <img src="Pic/3.png" alt="لوگوی شما">
+    <h1>پرتفوی مرموز من</h1>
+    <p>به دنیای اسرارآمیز من خوش آمدید. جایی که طراحی، کد و ایلومیناتی به هم می‌پیوندند.</p>
+    <a class="btn" href="#projects">پروژه‌ها</a>
   </header>
-  <main>
-    <section class="hero">
-      <h1>به پرتفوی من خوش آمدید</h1>
-      <p>اینجا مهارت‌ها و پروژه‌های من را با چاشنی ایلومیناتی می‌بینید.</p>
-    </section>
-  </main>
-  <footer>
-    <p>© 2025 محمد صبوری نژاد. همه حقوق محفوظ است.</p>
-  </footer>
+
+  <!--نماد های باستانی-->
+<section id="secrets">
+  <h2>✨ نمادهای باستانی ✨</h2>
+  <div class="symbol-grid">
+    <div class="symbol-card">
+      <h3>نماد هرم</h3>
+      <p>قدرت و رازهای نهفته در دل هرم‌های عظیم.</p>
+    </div>
+    <div class="symbol-card">
+      <h3>چشم هوروس</h3>
+      <p>نگاهی که هیچ چیزی از آن پنهان نمی‌ماند.</p>
+    </div>
+    <div class="symbol-card">
+      <h3>منشور نیکت</h3>
+      <p>فرم‌ها و شکل‌هایی که دنیا را شکل می‌دهند.</p>
+    </div>
+  </div>
+</section>
+
+<!--در باره من-->
+<section id="about">
+  <h2>👁️ درباره من</h2>
+  <div class="about-content">
+    <img src="your-photo.jpg" alt="تصویر شما">
+    <div class="about-text">
+      <p>من محمد صبوری نژاد، برنامه‌نویس وب هستم. به طراحی و توسعه وب‌سایت‌ها علاقه دارم و همیشه در تلاش برای یادگیری مهارت‌های جدید در این زمینه هستم.</p>
+      <p>با من می‌توانید در پروژه‌های مختلف همکاری کنید و از دانش و تجربیات من بهره‌مند شوید.</p>
+      <div class="social-links">
+        <a href="https://github.com/yourusername" target="_blank">گیت‌هاب</a>
+        <a href="https://www.instagram.com/yourusername" target="_blank">اینستاگرام</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--مهارت های من-->
+<section id="skills">
+  <h2>🔮 مهارت‌های من</h2>
+  <div class="skills-content">
+    <div class="skill">
+      <h3>HTML</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 90%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <h3>CSS</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 80%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <h3>JavaScript</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 75%;"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <h3>Python</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 70%;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--مهارت های من2-->
+<section id="skills">
+  <h2>🔮 مهارت‌های من</h2>
+  <div class="skills-content">
+    <div class="skill">
+      <h3>HTML</h3>
+      <div class="circle-progress" data-percent="90">
+        <svg width="120" height="120">
+          <circle cx="60" cy="60" r="55" stroke="#333" stroke-width="10" fill="none" />
+          <circle class="progress-ring" cx="60" cy="60" r="55" stroke="#ffd700" stroke-width="10" fill="none" stroke-dasharray="345" stroke-dashoffset="345" />
+        </svg>
+        <div class="percentage">90%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <h3>CSS</h3>
+      <div class="circle-progress" data-percent="80">
+        <svg width="120" height="120">
+          <circle cx="60" cy="60" r="55" stroke="#333" stroke-width="10" fill="none" />
+          <circle class="progress-ring" cx="60" cy="60" r="55" stroke="#ffd700" stroke-width="10" fill="none" stroke-dasharray="345" stroke-dashoffset="345" />
+        </svg>
+        <div class="percentage">80%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+    window.onload = function() {
+  const progressRings = document.querySelectorAll('.progress-ring');
+  progressRings.forEach(ring => {
+    const percentage = ring.closest('.circle-progress').getAttribute('data-percent');
+    const offset = 345 - (345 * percentage) / 100; // محاسبه فاصله برای پر شدن دایره
+    ring.style.strokeDashoffset = offset;
+  });
+}
+</script>
+
+    <!--پروژه‌های من-->
+<section id="projects">
+  <h2>🔮 پروژه‌های من</h2>
+  <div class="projects-content">
+    <div class="project-card">
+      <img src="project1.jpg" alt="پروژه 1">
+      <div class="project-info">
+        <h3>پروژه 1</h3>
+        <p>توضیح کوتاهی درباره پروژه 1</p>
+        <a href="project1-link.html" class="btn">مشاهده پروژه</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="project2.jpg" alt="پروژه 2">
+      <div class="project-info">
+        <h3>پروژه 2</h3>
+        <p>توضیح کوتاهی درباره پروژه 2</p>
+        <a href="project2-link.html" class="btn">مشاهده پروژه</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--تماس با من-->
+<section id="social">
+  <h2>🔮 شبکه‌های اجتماعی و تماس با من</h2>
+  <div class="social-links">
+    <a href="https://github.com/yourusername" target="_blank" class="social-icon">
+      <img src="github-icon.png" alt="گیت‌هاب">
+    </a>
+    <a href="https://www.instagram.com/yourusername" target="_blank" class="social-icon">
+      <img src="instagram-icon.png" alt="اینستاگرام">
+    </a>
+    <a href="mailto:your-email@example.com" class="social-icon">
+      <img src="email-icon.png" alt="ایمیل">
+    </a>
+  </div>
+  <p>برای تماس با من، از ایمیل زیر استفاده کنید:</p>
+  <a href="mailto:your-email@example.com" class="email-link">your-email@example.com</a>
+</section>
+
+
 </body>
 </html>
