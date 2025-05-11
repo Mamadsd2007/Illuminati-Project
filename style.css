@@ -1,130 +1,47 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Vazirmatn', sans-serif;
-  }
-  
-  body {
-    background-color: #0e0e0e;
-    color: #f0f0f0;
-    line-height: 1.6;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #111;
-    border-bottom: 1px solid #333;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .logo-icon {
-    color: #ffd700;
-    font-size: 1.5rem;
-  }
-  
-  .logo-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  
-  .search-box {
-    display: flex;
-    align-items: center;
-  }
-  
-  .search-box input {
-    padding: 0.4rem 0.8rem;
-    border: none;
-    border-radius: 5px 0 0 5px;
-    background-color: #222;
-    color: #fff;
-  }
-  
-  .search-box button {
-    padding: 0.4rem 0.8rem;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    background-color: #444;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .login-btn {
-    color: #fff;
-    text-decoration: none;
-    background-color: #444;
-    padding: 0.4rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-btn:hover {
-    background-color: #666;
-  }
-  
-  .main {
-    padding: 2rem;
-  }
-  
-  .intro {
+body {
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #111;
+}
+.logo {
+  font-size: 1.5rem;
+}
+nav a {
+  margin: 0 0.5rem;
+  color: #ccc;
+  text-decoration: none;
+}
+.login-btn {
+  color: #fff;
+  background: #333;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+.hero {
+  padding: 2rem;
+  text-align: center;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #111;
+  position: sticky;
+  bottom: 0;
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
     text-align: center;
-    margin-bottom: 3rem;
   }
-  
-  .intro h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  nav {
+    margin: 1rem 0;
   }
-  
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .project {
-    background-color: #1a1a1a;
-    padding: 1rem;
-    border-radius: 8px;
-    border: 1px solid #333;
-  }
-  
-  .project h2 {
-    color: #ffd700;
-    margin-bottom: 0.5rem;
-  }
-  
-  .footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #111;
-    border-top: 1px solid #333;
-    margin-top: 3rem;
-    padding-bottom: 0%;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    .search-box {
-      width: 100%;
-    }
-    .search-box input {
-      width: 80%;
-    }
-  }
-  
+}
